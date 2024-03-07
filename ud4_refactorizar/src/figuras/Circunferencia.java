@@ -2,6 +2,9 @@ package figuras;
 
 public class Circunferencia {
 
+    private double radio;
+    private String color;
+
     /**
      * @return the radio
      */
@@ -15,15 +18,15 @@ public class Circunferencia {
     public void setRadio(double radio) {
         this.radio = radio;
     }
-    private double radio;
-
+    
     public Circunferencia(double radio) {
         this.radio = radio;
     }
 
     public void imprimir() {
-        String color = "rojo";
-        System.out.println("Di�metro: " + 2 * getRadio());
+        double d;
+        this.color = "rojo";
+        d = 2 * getRadio();
         System.out.println("Color: " + color);
         double area = 2 * 3.1416 * getRadio() * getRadio();
         System.out.println(area);
