@@ -2,6 +2,7 @@ package figuras;
 
 public class Circunferencia {
 
+    private final double PI = 3.1416;
     private double radio;
     private String color;
 
@@ -28,10 +29,14 @@ public class Circunferencia {
         this.color = "rojo";
         d = 2 * getRadio();
         System.out.println("Color: " + color);
-        double area = 2 * 3.1416 * getRadio() * getRadio();
+        double area = calcularArea();
         System.out.println(area);
     }
 
+    public double calcularArea(){
+        return 2 * this.PI * getRadio() * getRadio();
+    }
+    
     public boolean esIgual(Circunferencia otro, boolean conDecimales) {
         double radio1 = this.getRadio();
         double radio2 = otro.getRadio();
