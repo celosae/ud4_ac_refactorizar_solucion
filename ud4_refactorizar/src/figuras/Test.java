@@ -7,10 +7,10 @@ public class Test {
         Circunferencia c2 = new Circunferencia(10.1);
         Circunferencia c3 = new Circunferencia(10.9);
 
-   if (c2.esIgual(c3, false))
+   if (c2.esIgual(false, c3))
             System.out.println("c2 y c3: iguales sin considerar decimales");
 
-   if (c2.esIgual(c3, true))
+   if (c2.esIgual(true, c3))
        System.out.println("c2 y c3: iguales considerando decimales");
 }
 

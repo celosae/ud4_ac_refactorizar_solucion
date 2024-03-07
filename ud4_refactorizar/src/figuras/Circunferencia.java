@@ -25,9 +25,7 @@ public class Circunferencia {
     }
 
     public void imprimir() {
-        double d;
         this.color = "rojo";
-        d = 2 * getRadio();
         System.out.println("Color: " + color);
         double area = calcularArea();
         System.out.println(area);
@@ -37,10 +35,10 @@ public class Circunferencia {
         return 2 * this.PI * getRadio() * getRadio();
     }
     
-    public boolean esIgual(Circunferencia otro, boolean conDecimales) {
+    public boolean esIgual(boolean considerarDecimales, Circunferencia otro) {
         double radio1 = this.getRadio();
         double radio2 = otro.getRadio();
-        if (conDecimales) {
+        if (considerarDecimales) {
             if (radio1 == radio2) {
                 return true;
             } else {
